@@ -1,7 +1,8 @@
 bash
 
 nano weather.txt
-#2022 35 20
+#
+2022 35 20
 2021 33 18
 2020 38 22
 2019 36 21
@@ -10,10 +11,12 @@ nano weather.txt
 2016 32 17
 
 nano cleaner.py
-#import re
+#
+import re
 import sys
 for i in sys.stdin:
     print(re.sub(r'\s+', ' ', i))
+    
 cat weather.txt | python3 cleaner.py > weather_cleaned.txt
 
 pig -x local
