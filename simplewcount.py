@@ -48,7 +48,9 @@ hdfs dfs -mkdir /wcount
 hdfs dfs -put input.txt /wcount
 
 # Check streaming jar path
-find / -name "hadoop-streaming*.jar" 2>/dev/null
+find / -name "hadoop-streaming*.jar" 2>/dev/null 
+
+( /home/hadoop/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \)
 
 # Run MapReduce
 hadoop jar STREAMING_JAR_PATH \
